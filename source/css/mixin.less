@@ -1,0 +1,34 @@
+.tag-button {
+  font-size: 14px;
+  line-height: 20px;
+  display: inline-block;
+  height: 20px;
+  margin: 3px;
+  padding: 0 10px;
+  color: @gray;
+  border-radius: 10px;
+  background: @bg-gray;
+  min-width: 30px;
+  text-align: center;
+
+  a {
+    color: @gray;
+  }
+  &:hover {
+    color: @gray;
+    background: @bg-gray-hover;
+  }
+}
+.post-page {
+  background-color: #fff;
+  margin: 0 auto;
+  max-width: @post-width;
+  padding: 10px;
+  position: relative;
+  @media screen and (min-width: @sm-width) {
+    padding: 10px 50px;
+  }
+  @media (max-width: @sm-width) {
+    padding: 10px 50px;
+  }
+}

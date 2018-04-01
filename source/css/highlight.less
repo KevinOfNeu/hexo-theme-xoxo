@@ -1,0 +1,160 @@
+pre,
+code {
+  background-color: @bg-gray;
+  font-family: "Source Code Pro", "courier new", "Input Mono", "PT Mono", Consolas, Monaco, Menlo, monospace;
+}
+
+pre {
+  padding: 10px;
+  code {
+    padding: 10px;
+  }
+}
+
+code {
+  padding: 2px 4px;
+  font-size: @code-size;
+}
+
+.highlight {
+  display: block;
+  overflow-x: auto;
+  color: #555;
+  font-size: 14px;
+  border-radius: 2px;
+  background-color: @bg-gray;
+  overflow-y: hidden;
+  margin: 20px 0;
+  table {
+    margin: 0 !important;
+    width: auto !important;
+    border: none !important;
+    tr {
+      border: none !important;
+    }
+    td {
+      border: none !important;
+      padding: 0 !important;
+    }
+  }
+  .line {
+    height: 20px;
+    line-height: 20px;
+  }
+  .gutter {
+    pre {
+      padding: 10px;
+      color: #869194;
+      background-color: #eff2f3;
+      text-align: center;
+      overflow: hidden;
+    }
+  }
+  .code {
+    font-size: @code-size;
+    pre {
+      padding: 10px;
+    }
+  }
+  .comment,
+  .meta {
+    color: #b3b3b3;
+  }
+  .string,
+  .value,
+  .variable,
+  .template-variable,
+  .strong,
+  .emphasis,
+  .quote,
+  .inheritance,
+  .ruby .symbol,
+  .xml .cdata {
+    color: @site-color;
+  }
+  .keyword,
+  .selector-tag,
+  .type,
+  .javascript .function {
+    color: #e96900;
+  }
+  .preprocessor,
+  .built_in,
+  .params,
+  .constant,
+  .symbol,
+  .bullet,
+  .attribute,
+  .css .hexcolor {
+    color: @site-color;
+  }
+  .number,
+  .literal {
+    color: #ae81ff;
+  }
+  .section,
+  .header,
+  .name,
+  .function,
+  .python .decorator,
+  .python .title,
+  .ruby .function .title,
+  .ruby .title .keyword,
+  .perl .sub,
+  .javascript .title,
+  .coffeescript .title {
+    color: #525252;
+  }
+  .tag,
+  .regexp {
+    color: #2973b7;
+  }
+  .title,
+  .attr,
+  .selector-id,
+  .selector-class,
+  .selector-attr,
+  .selector-pseudo,
+  .ruby .constant,
+  .xml .tag .title,
+  .xml .pi,
+  .xml .doctype,
+  .html .doctype,
+  .css .id,
+  .css .pseudo,
+  .class,
+  .ruby .class .title {
+    color: #2973b7;
+  }
+  .css .code .attribute {
+    color: #e96900;
+  }
+  .css .class {
+    color: #525252;
+  }
+  .tag .attribute {
+    color: #e96900;
+  }
+  .addition {
+    color: #55a532;
+    background-color: #eaffea;
+  }
+  .deletion {
+    color: #bd2c00;
+    background-color: #ffecec;
+  }
+  .link {
+    text-decoration: underline;
+  }
+  .function {
+    .keyword {
+      color: #0092db;
+    }
+    .params {
+      color: #525252;
+    }
+    .title {
+      color: #525252;
+    }
+  }
+}

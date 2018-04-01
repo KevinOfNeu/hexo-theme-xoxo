@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="<%=config.language%>">
+<%-partial('partials/head')%>
+
+<body>
+  <%-partial('partials/nav')%>
+
+  <div class="container" id="content-outer">
+    <div class="inner" id="content-inner">
+      <%- body %>
+    </div>
+
+    <% if (page.total > 1){ %>
+      <nav class="page-nav text-center">
+          <%- paginator({
+            prev_text: '〈',
+            mid_size: 1,
+            next_text: '〉'}) %>
+      </nav>
+    <% } %>
+
+  </div>
+  <%-partial('partials/footer')%>
+  <%-partial('partials/scripts')%>
+  <%-partial('partials/analytics') %>
+</body>
+</html>

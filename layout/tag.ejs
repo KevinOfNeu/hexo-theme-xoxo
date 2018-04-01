@@ -1,0 +1,20 @@
+
+<div class="page tag-page" id="tag">
+  <h3 title="<%=page.tag%>下的文章"><%=page.tag%></h3>
+  <% page.posts.each(function(article) { %>
+    <div class="tag-item">
+      <% if (article.link) { %>
+        <a href="<%=url_for(article.link)%>" target="_blank">
+          <%=article.title || 'No Title'%>
+        </a>
+      <% } else { %>
+        <a href="<%=url_for(article.path)%>">
+          <%=article.title || 'No Title'%>
+        </a>
+      <% } %>
+      <time class="time" datetime="<%=date_xml(article.date)%>">
+        <%=date(article.date)%>
+      </time>
+    </div>
+  <% }); %>
+</div>

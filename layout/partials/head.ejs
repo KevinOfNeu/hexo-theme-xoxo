@@ -1,0 +1,39 @@
+<%
+var pageTitle = page.title || '';
+if (is_archive()) pageTitle = 'archives';
+if (is_tag()) pageTitle = 'tag: ' + page.tag;
+if (is_category()) pageTitle = 'category: ' + page.category;
+if (is_month()) pageTitle += ': ' + page.month + '/' + page.year;
+if (is_year()) pageTitle += ': ' + page.year;
+pageTitle += ' [ ' + config.title + ' ]';
+if (is_home()) pageTitle+= config.subtitle;
+%>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#202020"/>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+  
+  <% if (page.tags && page.tags.length) { %>
+    <meta name="keywords" content="<% page.tags.forEach(function(tag) { %><%= tag.name %>,<% }); %>" />
+  <% } else { %>
+    <meta name="keywords" content="<%= config.keywords %>" />
+  <% } %>
+
+  <% if (config.description) { %>
+    <meta name="description" content="<%= config.description %>" />
+  <% } else {  %>
+    <meta name="description" content="<%= page.description || page.title || (config.title + ',' + config.subtitle) %>" />
+  <% } %>
+  
+  <link rel="icon" type="image/x-icon" href="/logo.png">
+  <title><%=pageTitle%></title>
+  <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
+    <!-- stylesheets list from config.yml -->
+    <% theme.stylesheets.forEach(function(url) { %>
+      <link rel="stylesheet" href="<%=url%>">
+    <% }); %>
+  <% } %>
+</head>

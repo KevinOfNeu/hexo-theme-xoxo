@@ -1,0 +1,18 @@
+<nav class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+  <a class="pure-menu-heading" href="/">
+    <img class="avatar" src="https://avatars1.githubusercontent.com/u/8795397?s=460&v=4">
+    <span class="title"><%=config.title%></span>
+  </a>
+
+  <ul class="pure-menu-list clearfix">
+      <% Object.keys(theme.menu).forEach(function(key) { %>
+          <%console.log(key)%>
+          <% if ((is_home() && key==='home') || (is_archive() && key==='archives') || page.type === key) { %>
+            <li class="pure-menu-item actived"><a href="<%=theme.menu[key]%>" class="pure-menu-link"><%= __(key)%></a></li>
+          <% } else { %>
+            <li class="pure-menu-item"><a href="<%=theme.menu[key]%>" class="pure-menu-link"><%= __(key)%></a></li>
+          <% } %>
+      <% }); %>
+  </ul>
+   
+</nav>

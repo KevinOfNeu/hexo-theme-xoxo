@@ -1,0 +1,16 @@
+<div class="archive" >
+  <a class="post-go" href="<%- config.root %><%- post.path %>">
+    <div>
+      <span class="date">
+        <%- moment(post.date || '').format('MM-DD')%>
+      </span>
+      <span class="slash">/</span>
+      <%- post.title || theme.default_post_title || "Untitled" %>
+    </div>
+
+    <!--<div class="excerpt">-->
+      <!--<%- post.excerpt %>-->
+    <!--</div>-->
+  </a>
+
+</div>

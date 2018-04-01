@@ -1,0 +1,39 @@
+<article class="post" id="post">
+  <header class="post-header text-center">
+    <h1 class="title">
+      <%=page.title%>
+    </h1>
+    <span>
+      <% if (theme.show_date && page.date) { %>
+      <time class="time" datetime="<%=date_xml(page.date)%>">
+        <%=date(page.date)%>
+      </time>
+      <% } %>
+    </span>
+    <span class="slash">/</span>
+    <span class="post-meta">
+      <span class="post-tags">
+        <%- list_tags(page.tags, {
+          show_count: false,
+          class: 'article-tag'
+        }) %>
+      </span>
+    </span>
+    <span class="slash">/</span>
+    <span class="read">
+      <span id="busuanzi_value_page_pv"></span> 点击
+    </span>
+    <span class="slash">/</span>
+    <span class="read">阅读耗时 <%=readingTime(page.content, '分钟') %></span>
+  </header>
+
+  <div class="post-content">
+    <%-page.content%>
+  </div>
+
+  <div>全文完。</div>
+</article>
+<%- partial('partials/share') %>
+<%- partial('partials/prenext') %>
+<%- partial('partials/disqus') %>
+<%- partial('partials/toc') %>
