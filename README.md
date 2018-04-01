@@ -24,7 +24,7 @@ Snapshots:
 ## 使用
 除了基础 Hexo 配置外,你还需要这样...
 
-###_config.yml
+### _config.yml
 ```yml
 # Custom Config
 menu:
@@ -60,4 +60,3 @@ baidu_analytics: FuckUBaidu
 ## TODO
 - [ ] 模板文件中的中文字符提取, 支持 i18n
 - [ ] 增加分享 widget
-- [ ]
