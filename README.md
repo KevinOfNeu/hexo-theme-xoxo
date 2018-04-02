@@ -6,10 +6,11 @@ Hexo theme inspired by [microb](https://github.com/microacup/hexo-theme-micorb)
 
 Snapshots: 
 
-![](http://7xr586.com1.z0.glb.clouddn.com/images/dwkif.png)
+![](http://7xr586.com1.z0.glb.clouddn.com/images/bjwex.png)
 
-![](http://7xr586.com1.z0.glb.clouddn.com/images/nvmnx.png)
+![](http://7xr586.com1.z0.glb.clouddn.com/images/1hd4l.png)
 
+![](http://7xr586.com1.z0.glb.clouddn.com/images/xl58k.png)
 ...
 
 ## 特点
