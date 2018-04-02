@@ -401,9 +401,6 @@ body {
   max-width: @post-width - 30;
   padding: 0 10px;
   position: relative;
-  &:hover {
-    color: @light-blue;
-  }
   .post-nav-item {
     display: inline-block;
     flex: 1;
@@ -412,6 +409,9 @@ body {
     position: relative;
     vertical-align: top;
     width: 49.5%;
+    &:hover {
+      color: @light-blue;
+    }
 
     span {
       display: inline-block;
@@ -563,6 +563,17 @@ body {
   }
 }
 
+.copyright {
+  margin: 15px auto;
+  font-size: 12px;
+  text-align: center;
+  a {
+    text-decoration: underline;
+    &:hover {
+      color: @light-blue;
+    }
+  }
+}
 //.share {
 //  float: left;
 //  position: fixed;

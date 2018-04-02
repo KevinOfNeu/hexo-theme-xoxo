@@ -649,9 +649,6 @@ body {
   padding: 0 10px;
   position: relative;
 }
-.post-nav:hover {
-  color: #2196F3;
-}
 .post-nav .post-nav-item {
   display: inline-block;
   -ms-flex: 1;
@@ -661,6 +658,9 @@ body {
   position: relative;
   vertical-align: top;
   width: 49.5%;
+}
+.post-nav .post-nav-item:hover {
+  color: #2196F3;
 }
 .post-nav .post-nav-item span {
   display: inline-block;
@@ -807,6 +807,17 @@ body {
   letter-spacing: 2px;
 }
 .archives .archive a:hover {
+  color: #2196F3;
+}
+.copyright {
+  margin: 15px auto;
+  font-size: 12px;
+  text-align: center;
+}
+.copyright a {
+  text-decoration: underline;
+}
+.copyright a:hover {
   color: #2196F3;
 }
 pre,
