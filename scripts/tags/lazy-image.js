@@ -14,7 +14,7 @@ function lazyImage(args) {
   alt = alt.trim();
   title = title.trim();
 
-  var image = ['<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/loading.gif" data-original="' + src + '" class="full-image"'];
+  var image = ['<span itemprop="image" itemscope itemtype="https://schema.org/ImageObject"><img itemprop="url image" src="/images/loading.gif" data-original="' + src + '" class="full-image"'];
   alt.length > 0 && image.push('alt="' + alt + '"');
   title.length > 0 && image.push('title="' + title + '"');
   image.push('/><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>');
