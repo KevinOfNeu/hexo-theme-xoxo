@@ -211,12 +211,19 @@ body {
   -ms-flex-pack: center;
       justify-content: center;
 }
+@media screen and (max-width: 500px) {
+  .home-menu .pure-menu-heading {
+    display: none!important;
+  }
+}
 .home-menu .pure-menu-heading .avatar {
   width: 40px;
   height: 40px;
   background: #efefef;
   border-radius: 20px;
   border-style: none;
+  display: inline-block;
+  vertical-align: middle;
 }
 .home-menu .pure-menu-heading .title {
   color: #202020;
@@ -228,28 +235,7 @@ body {
   font-size: 24px;
   line-height: 40px;
 }
-.home-menu img {
-  display: inline-block;
-  vertical-align: middle;
-}
-.home-menu .logo {
-  cursor: pointer;
-  position: absolute;
-  left: 50%;
-  top: 8px;
-  margin-left: -16px;
-  width: 32px;
-  height: 32px;
-  padding: 5px;
-}
-@media screen and (max-width: 1280px) {
-  .home-menu .logo {
-    left: auto;
-    right: 10px;
-  }
-}
 .home-menu .pure-menu-list {
-  margin-left: 20px;
   display: -ms-flexbox;
   display: flex;
 }

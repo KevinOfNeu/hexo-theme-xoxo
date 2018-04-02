@@ -24,6 +24,9 @@ body {
   .pure-menu-heading {
     padding: 0;
     display: flex;
+    @media screen and (max-width: 500px) {
+      display: none!important;
+    }
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -33,6 +36,8 @@ body {
       background: @bg-gray-hover;
       border-radius: 20px;
       border-style: none;
+      display: inline-block;
+      vertical-align: middle;
     }
     .title {
       color: @m-black;
@@ -45,26 +50,7 @@ body {
       line-height: 40px;
     }
   }
-  img {
-    display: inline-block;
-    vertical-align: middle;
-  }
-  .logo {
-    cursor: pointer;
-    position: absolute;
-    left: 50%;
-    top: @logo-top;
-    margin-left: -16px;
-    width: 32px;
-    height: 32px;
-    padding: 5px;
-    @media screen and (max-width: @xl-width) {
-      left: auto;
-      right: 10px;
-    }
-  }
   .pure-menu-list {
-    margin-left: 20px;
     display: flex;
     .toc-menu {
       display: none;
