@@ -13,7 +13,7 @@ gulp.task('default', ['less'], function() {
 });
 
 gulp.task('less', function() {
-  return gulp.src('./source/css/xxoo.less')
+  return gulp.src('./source/css/xoxo.less')
     .pipe(sourcemaps.init())
     .pipe(less({
       plugins: [autoprefix]
@@ -25,7 +25,7 @@ gulp.task('less', function() {
 
 gulp.task('scripts', function() {
   var files = [
-    './source/js/xxoo.js',
+    './source/js/xoxo.js',
   ];
 
   return gulp.src(files)

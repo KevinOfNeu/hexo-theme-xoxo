@@ -1,4 +1,4 @@
-# hexo-theme-xxoo
+# hexo-theme-xoxo
 
 Hexo theme inspired by [microb](https://github.com/microacup/hexo-theme-micorb) 
 

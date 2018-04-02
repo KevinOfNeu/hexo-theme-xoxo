@@ -19,12 +19,12 @@ favicon: /logo.png
 stylesheets:
 # - /css/normalize.css
 - //cdn.bootcss.com/pure/1.0.0/pure-min.css
-- /css/xxoo.css
+- /css/xoxo.css
 
 # scripts loaded in the end of the body
 scripts:
 #- //cdn.bootcss.com/zepto/1.2.0/zepto.min.js
-#- /js/xxoo.js
+#- /js/xoxo.js
 
 # switch
 show_excerpt: true
