@@ -196,6 +196,10 @@ body {
       flex-direction: row;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
   background: #fefefe;
   overflow-y: scroll;
 }
