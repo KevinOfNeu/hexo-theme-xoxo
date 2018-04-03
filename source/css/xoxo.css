@@ -84,6 +84,7 @@ em {
 }
 footer {
   width: 60%;
+  max-width: 840px;
   margin-left: auto;
   margin-right: auto;
   background-color: #fff;
