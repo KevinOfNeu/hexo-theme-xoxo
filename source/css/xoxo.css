@@ -329,7 +329,7 @@ body {
 }
 .recent-posts .recent-post-item .more {
   margin-top: -5px;
-  font-size: 14px;
+  font-size: 14px!important;
 }
 .recent-posts .recent-post-item .more:hover {
   color: #2196F3;
