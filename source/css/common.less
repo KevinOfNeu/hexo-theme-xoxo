@@ -8,78 +8,92 @@ body {
   margin: 0;
 }
 
-.home-menu {
-  border-bottom-style: solid;
-  border-bottom-color: @bg-gray;
-  border-bottom-width: 0.5px;
-  background: @bg-gray-hover;
-  height: @nav-height;
-  padding: @nav-padding;
-  flex-direction: row;
+.nav-container {
   display: flex;
+  position: fixed;
+  z-index: 100;
   align-items: center;
-  justify-content: space-between;
-  background: #fefefe;
-  overflow-y: scroll;
-  .pure-menu-heading {
-    padding: 0;
-    display: flex;
-    @media screen and (max-width: 500px) {
-      display: none!important;
-    }
+  width: 100%;
+  .home-menu {
+    border-bottom-style: solid;
+    border-bottom-color: @bg-gray;
+    border-bottom-width: 0.5px;
+    height: @nav-height;
+    padding: @nav-padding;
+    background: #fefefe;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    .avatar {
-      width: 40px;
-      height: 40px;
-      background: @bg-gray-hover;
-      border-radius: 20px;
-      border-style: none;
-      display: inline-block;
-      vertical-align: middle;
-    }
-    .title {
-      color: @m-black;
-      margin-left: 10px;
-      display: inline-block;
-      vertical-align: middle;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 24px;
-      line-height: 40px;
-    }
-  }
-  .pure-menu-list {
     display: flex;
-    .toc-menu {
-      display: none;
-      @media screen and (min-width: @xl-width) {
-        display: initial;
+    justify-content: space-between;
+    @media screen and (max-width: 615px) {
+      justify-content: center;
+    }
+    overflow-y: scroll;
+    max-width:1000px;
+    @media screen and (min-width: @xl-width) {
+      max-width: 880px;
+    }
+    margin-left: auto;
+    margin-right: auto;
+    .pure-menu-heading {
+      display: flex;
+      @media screen and (max-width: 615px) {
+        display: none!important;
+      }
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      .avatar {
+        width: 40px;
+        height: 40px;
+        background: @bg-gray-hover;
+        border-radius: 20px;
+        border-style: none;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .title {
+        color: @m-black;
+        margin-left: 10px;
+        display: inline-block;
+        vertical-align: middle;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 40px;
       }
     }
-    .menu-icon {
-      width: 18px;
-      height: 18px;
-    }
-    .pure-menu-children {
-      border: 1px solid @gray-light;
-    }
-    .pure-menu-link {
-      padding: 4px 15px;
-      color: inherit;
-      &:after {
-        content: ' ';
+    .pure-menu-list {
+      display: flex;
+      .toc-menu {
+        display: none;
+        @media screen and (min-width: @xl-width) {
+          display: initial;
+        }
       }
-      &:focus {
-        background-color: #fff;
+      .menu-icon {
+        width: 18px;
+        height: 18px;
       }
-    }
-    .pure-menu-item.actived {
-      color: @light-blue;
+      .pure-menu-children {
+        border: 1px solid @gray-light;
+      }
+      .pure-menu-link {
+        padding: 4px 15px;
+        color: inherit;
+        &:after {
+          content: ' ';
+        }
+        &:focus {
+          background-color: #fff;
+        }
+      }
+      .pure-menu-item.actived {
+        color: @light-blue;
+      }
     }
   }
 }
+
 .slash {
   color: @gray-light;
   padding-left: 5px;
@@ -92,7 +106,7 @@ body {
   max-width: 1000px;
   min-height: calc(~"100vh - 120px");
   @media screen and (min-width: @xl-width) {
-    max-width: 1200px;
+    max-width: 880px;
   }
 }
 
@@ -191,6 +205,66 @@ body {
     color: @light-blue;
   }
 }
+
+.post-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  .toc-container {
+    .toc-article {
+      display: none;
+      a:hover {
+        color: @light-blue;
+      }
+      @media screen and (min-width: 1260px) {
+        display: block;
+        position: fixed;
+        margin-left: -15px;
+        max-height: calc(~"100vh - 150px");
+        width: 200px;
+        top: 25%;
+        font-size: 12px;
+        padding: 10px;
+        overflow-y: auto;
+        overflow-x: auto;
+        border-radius: 4px;
+        background-color: #F6F6F6;
+      }
+      @media screen and (max-width: 1260px) {
+        display: none!important;
+      }
+      ol,
+      ul {
+        list-style: none;
+        padding-left: 0;
+        ol,
+        ul {
+          padding-left: 1rem;
+        }
+      }
+      .toc {
+        .toc-item {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          width: 180px;
+          &.toc-level-4 {
+            color: #444;
+          }
+          &.toc-level-5 {
+            color: #555;
+          }
+          &.toc-level-6 {
+            color: #666;
+          }
+        }
+      }
+    }
+  }
+}
+
 
 .post {
   .post-page;
@@ -416,57 +490,6 @@ body {
   }
   @media screen and (max-width: @sm-width) {
     display: none;
-  }
-}
-
-.toc-article {
-  display: none;
-  a:hover {
-    color: @light-blue;
-  }
-  @media screen and (min-width: 1260px) {
-    display: block;
-    position: fixed;
-    max-height: calc(~"100vh - 150px");
-    width: 200px;
-    max-width: 200px;
-    top: 80px;
-    right: 5px;
-    font-size: 12px;
-    padding: 10px;
-    overflow-y: auto;
-    overflow-x: auto;
-    border-radius: 4px;
-    background-color: #F6F6F6;
-  }
-  @media screen and (max-width: 1260px) {
-    display: none!important;
-  }
-  ol,
-  ul {
-    list-style: none;
-    padding-left: 0;
-    ol,
-    ul {
-      padding-left: 1rem;
-    }
-  }
-  .toc {
-    .toc-item {
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
-      width: 180px;
-      &.toc-level-4 {
-        color: #444;
-      }
-      &.toc-level-5 {
-        color: #555;
-      }
-      &.toc-level-6 {
-        color: #666;
-      }
-    }
   }
 }
 
