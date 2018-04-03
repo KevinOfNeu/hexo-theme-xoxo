@@ -18,6 +18,7 @@
             class: 'index-tag'
           }) %>
           <% } %>
+
         </div>
 
         <% if (theme.show_excerpt && post.excerpt) { %>
@@ -25,8 +26,7 @@
             <%- post.excerpt %>
           </div>
         <% } %>
-
-        <a class="title" href="<%=config.root + post.path%>"> 阅读全文〉</a>
+        <a class="more" href="<%=config.root + post.path%>"> 阅读全文〉</a>
       </article>
     <% }); %>
   </div>
