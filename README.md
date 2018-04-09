@@ -57,6 +57,12 @@ disqus_shortname: XXX
 
 google_analytics: XXX
 baidu_analytics: FuckUBaidu
+
+#footer
+index_page: https://blog.0xff000000.com
+main_site: https://0xff000000.com
+github: https://github.com/KevinOfNeu
+
 ```
 
 ## TODO
