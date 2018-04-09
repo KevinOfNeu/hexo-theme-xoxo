@@ -162,6 +162,7 @@ footer .bottom-item:hover {
 .post-page {
   background-color: #fff;
   max-width: 880px;
+  width: 100%;
   padding: 10px;
   position: relative;
 }
@@ -299,6 +300,7 @@ body {
   margin: 0 auto;
   max-width: 1000px;
   min-height: calc(100vh - 120px);
+  width: 100%;
 }
 @media screen and (min-width: 1280px) {
   .container {
@@ -471,6 +473,7 @@ body {
 .post {
   background-color: #fff;
   max-width: 880px;
+  width: 100%;
   padding: 10px;
   position: relative;
 }
@@ -673,6 +676,7 @@ body {
 .tag-page {
   background-color: #fff;
   max-width: 880px;
+  width: 100%;
   padding: 10px;
   position: relative;
   border: none !important;
