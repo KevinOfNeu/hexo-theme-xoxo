@@ -14,5 +14,8 @@
     "gulp-sourcemaps": "^2.6.1",
     "gulp-uglify": "^3.0.0",
     "less-plugin-autoprefix": "^1.5.1"
+  },
+  "dependencies": {
+    "hexo-reading-time": "^1.0.3"
   }
 }
